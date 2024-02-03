@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import multer from "multer";
-import { body, check, validationResult } from "express-validator";
+import { body } from "express-validator";
 import cloudinary from "cloudinary";
 
 import verifyToken from "../middleware/auth";

@@ -13,7 +13,14 @@ const Header = () => {
           <Link to="/">Holidays.com</Link>
         </span>
         <span className="flex space-x-2">
-          {isLoggedIn ? (
+          {!isLoggedIn ? (
+            <Link
+              to="/sign-in"
+              className="flex bg-white items-center border-2 rounded text-blue-600 px-3 font-bold hover:bg-gray-100"
+            >
+              Sign in
+            </Link>
+          ) : (
             <>
               <Link
                 to="/my-bookings"
@@ -29,13 +36,6 @@ const Header = () => {
               </Link>
               <SignOutButton />
             </>
-          ) : (
-            <Link
-              to="/sign-in"
-              className="flex bg-white items-center border-2 rounded text-blue-600 px-3 font-bold hover:bg-gray-100"
-            >
-              Sign in
-            </Link>
           )}
         </span>
       </div>
