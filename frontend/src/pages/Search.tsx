@@ -118,7 +118,7 @@ const Search = () => {
           </select>
         </div>
         {hotelData?.data.map((hotel) => (
-          <SearchResultCard hotel={hotel} />
+          <SearchResultCard hotel={hotel} key={hotel._id} />
         ))}
         {!!hotelData?.pagination.total && (
           <Pagination

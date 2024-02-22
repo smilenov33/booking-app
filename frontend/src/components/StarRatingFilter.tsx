@@ -10,7 +10,7 @@ const StarRatingFilter = ({ selectedStarts, onChange }: Props) => {
     <div className="border-b border-slate-300 pb-5">
       <h4 className="text-md font-semibold mb-2">Property Rating</h4>
       {SORT_OPTIONS.map((star) => (
-        <label className="flex items-center space-x-2">
+        <label className="flex items-center space-x-2" key={star}>
           <input
             type="checkbox"
             className="rounded"
